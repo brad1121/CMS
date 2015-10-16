@@ -33,6 +33,7 @@
     <Compile Include="app.js" />
     <Compile Include="db.js.temp" />
     <Compile Include="db.js" />
+    <Compile Include="models\pages.js" />
     <Compile Include="models\account.js" />
     <Compile Include="public\js\bootstrap.min.js" />
     <Compile Include="routes\index.js" />
@@ -40,12 +41,15 @@
     <Content Include="package.json" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />
+    <Content Include="views\page_builder.jade" />
+    <Content Include="views\pages_list.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
     <Content Include="views\error.jade" />
     <Content Include="views\register.jade" />
     <Content Include="views\support.jade" />
     <Content Include="views\dashboard.jade" />
+    <Content Include="views\dash_layout.jade" />
     <Content Include="views\user.jade" />
   </ItemGroup>
   <ItemGroup>

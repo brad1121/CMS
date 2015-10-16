@@ -1,0 +1,40 @@
+﻿extends dash_layout
+
+block dashContent
+    if update
+        h3 Page Updated
+
+     form(action=(thePage?"/dashboard/page/edit/#{pageID}":"/dashboard/page/new/create"), method="post")
+        each Page in thePage
+            .form-group
+                label(for="pageName") Page Name
+                if thePage
+                    input(type="text",name="pageName",class="form-control",placeholder="The name of the page",value="#{Page.pageName}")
+                 else
+                    input(type="text",name="pageName",class="form-control",placeholder="The name of the page")
+            .form-group
+                label(for="pageUri") Page URL (Nice URL)
+                if thePage
+                    input(type="text",name="pageUri",class="form-control",placeholder="The page Uri" value="#{Page.pageUri}")
+                else
+                    input(type="text",name="pageUri",class="form-control",placeholder="The page Uri")
+            .form-group
+                label(for="pageHeading") Page Heading
+                if thePage
+                    input(type="text",name="pageHeading",class="form-control",placeholder="The heading of the page", value="#{Page.pageHeading}")
+                else
+                    input(type="text",name="pageHeading",class="form-control",placeholder="The heading of the page")
+            .form-group
+                label(for="pageBody") Page Content
+                if thePage
+                    textarea(length="100",name="pageBody",class="form-control") #{Page.pageContent}
+                else
+                    textarea(length="100",name="pageBody",class="form-control")
+            .form-group
+                label(for="pageTags") Page Tags
+                if thePage
+                    input(type="text",name="pageTags",class="form-control",placeholder="Tags, comma seperated",value="#{Page.pageTags}")
+                else
+                    input(type="text",name="pageTags",class="form-control",placeholder="Tags, comma seperated")
+            button(type="submit",class="btn btn-success",name="add_page") Publish Page
+        

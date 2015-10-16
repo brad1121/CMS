@@ -1,0 +1,18 @@
+﻿extends dash_layout
+
+block dashContent
+    h2 Pages
+    a(href="/dashboard/page/new") Create a new page
+    p LIST OF PAGES IN THE CMS
+    table.table
+        thead
+            tr
+                td Page Name
+                td Page URI
+                td Page Heading
+        tbody
+            each page in thePages
+                tr(onclick="window.location='/dashboard/page/edit/#{page.id}'")
+                    td= page.pageName
+                    td= page.pageUri
+                    td= page.pageHeading

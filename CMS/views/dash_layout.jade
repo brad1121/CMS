@@ -1,0 +1,16 @@
+﻿extends layout
+
+block dash
+      div.container
+        div.row
+            div.col-md-3.dash_nav
+                ul
+                 li 
+                    a(href="/dashboard/pages") Pages
+                 li 
+                    a(href="/dashboard/posts") Posts
+                 li 
+                    a(href="/dashboard/settings") Settings
+
+            div.col-md-9
+                block dashContent

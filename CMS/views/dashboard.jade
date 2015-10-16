@@ -1,16 +1,4 @@
-﻿extends layout
+﻿extends dash_layout
 
-block content
-    div.container
-        div.row
-            div.col-md-3
-                ul
-                 li 
-                    a(href="/pages")Pages
-                 li 
-                    a(href="/Posts")Posts
-                 li 
-                    a(href="/Settings")Settings
-
-            div.col-md-9
-                p Welcome #{user.username} to NodeCMS
+block dashContent
+   p Welcome #{user.username} to NodeCMS
