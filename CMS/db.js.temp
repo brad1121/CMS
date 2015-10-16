@@ -1,0 +1,5 @@
+var dbb = require('mongoose');
+
+dbb.connect('Your_DB_info');
+
+module.exports = dbb.connection;
