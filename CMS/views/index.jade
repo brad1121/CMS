@@ -3,17 +3,7 @@
 block content
       
     div.container
-        div.row
-            div.col-md-6
-                div.well Welcome to the #{title} client portal.
-            div.col-md-6
-                form(action="/login",method="post",name="login")
-                    input(type="text",name="username",placeholder="Enter your username")
-                    br
-                    input(type="password",name="password",placeholder="Enter your password")
-                    br
-                    button.btn.success(name="login",type="submit") Login
-                    
+         != page_content
    
 
 

@@ -1,0 +1,19 @@
+﻿extends dash_layout
+
+block dashContent
+    h2 Settings
+    form(action="/dashboard/settings", method="post")    
+     div.form-group
+        label(for="landingPage") Home Page
+        select(class="form-control",name="landingPage",id="landingPage")
+            each page in settings.pages
+             - console.log(page);
+             option(value="#{page._id}",selected=settings.settings.landingPage==page._id)= page.pageName
+        
+     div.form-group
+      input(type="hidden",value="#{settings.settings._id}",name="setKey")
+      button(type="submit",class="btn btn-info") Save
+   
+
+
+ 
